@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078316334043",
+    "project_id": "wagner-flutter-todo",
+    "storage_bucket": "wagner-flutter-todo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078316334043:android:12a830b39d1ce0868345fe",
+        "android_client_info": {
+          "package_name": "com.wagnersilvestre.flutter_clean_todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078316334043-bs55psl6pelpl22jtsr45tb4kchn2pmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmPsCTjW-mvMfZYMfq5xmz5OPX3wAyWYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078316334043-bs55psl6pelpl22jtsr45tb4kchn2pmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
