@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_clean_todo/application/auth/auth_service.dart';
 import 'package:flutter_clean_todo/flutter/pages/register/register_page_presenter.dart';
-import 'package:flutter_clean_todo/getx/presenters/stream_subscription_manager.dart';
+import 'package:flutter_clean_todo/infra/getx/presenters/stream_subscription_manager.dart';
 import 'package:get/get.dart';
 
 class GetxRegisterPresenter extends GetxController
@@ -27,7 +27,7 @@ class GetxRegisterPresenter extends GetxController
       _errorRx.value = null;
       await _authService.registerWithEmailAndPassword(
           name: name, email: email, password: password);
-    } on FirebaseAuthException catch (e, s) {
+    } on FirebaseAuthException catch (e) {
       _errorRx.value = e.message;
     } catch (e, s) {
       print(e);

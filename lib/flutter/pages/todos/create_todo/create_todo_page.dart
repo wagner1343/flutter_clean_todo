@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 class CreateTodoPage extends StatelessWidget {
   final CreateTodoPagePresenter _presenter;
 
-  CreateTodoPage(this._presenter, {Key? key}) : super(key: key);
+  const CreateTodoPage(this._presenter, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

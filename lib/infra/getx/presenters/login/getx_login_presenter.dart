@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_clean_todo/application/auth/auth_service.dart';
 import 'package:flutter_clean_todo/flutter/pages/login/login_page_presenter.dart';
-import 'package:flutter_clean_todo/getx/presenters/stream_subscription_manager.dart';
+import 'package:flutter_clean_todo/infra/getx/presenters/stream_subscription_manager.dart';
 import 'package:get/get.dart';
 
 class GetxLoginPresenter extends GetxController
@@ -26,30 +26,13 @@ class GetxLoginPresenter extends GetxController
       _errorRx.value = null;
       await _authService.loginWithEmailAndPassword(
           email: email, password: password);
-    } on FirebaseAuthException catch (e, s) {
+    } on FirebaseAuthException catch (e) {
       _errorRx.value = e.message;
     } catch (e, s) {
       print(e);
       print(s);
       _errorRx.value =
           "Something went wrong when trying to login with email and password";
-    } finally {
-      _isLoggingIn.value = false;
-    }
-  }
-
-  @override
-  Future<void> loginWithGoogle() async {
-    try {
-      _isLoggingIn.value = true;
-      _errorRx.value = null;
-      await _authService.loginWithGoogle();
-    } on FirebaseAuthException catch (e, s) {
-      _errorRx.value = e.message;
-    } catch (e, s) {
-      print(e);
-      print(s);
-      _errorRx.value = "Something went wrong when trying to login with google";
     } finally {
       _isLoggingIn.value = false;
     }

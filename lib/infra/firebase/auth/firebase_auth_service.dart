@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_clean_todo/application/auth/auth_service.dart';
 import 'package:flutter_clean_todo/application/auth/auth_user.dart';
-import 'package:flutter_clean_todo/firebase/auth/firebase_auth_extensions.dart';
+import 'package:flutter_clean_todo/infra/firebase/auth/firebase_auth_extensions.dart';
 
 class FirebaseAuthService implements AuthService {
   final FirebaseAuth _firebaseAuth;
@@ -15,11 +15,6 @@ class FirebaseAuthService implements AuthService {
   }) async {
     await _firebaseAuth.signInWithEmailAndPassword(
         email: email, password: password);
-  }
-
-  @override
-  Future<void> loginWithGoogle() async {
-    await _firebaseAuth.signInWithProvider(GoogleAuthProvider());
   }
 
   @override

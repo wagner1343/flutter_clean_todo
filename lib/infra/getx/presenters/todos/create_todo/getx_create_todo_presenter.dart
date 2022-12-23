@@ -1,6 +1,6 @@
 import 'package:flutter_clean_todo/application/todo/todos_service.dart';
 import 'package:flutter_clean_todo/flutter/pages/todos/create_todo/create_todo_page_presenter.dart';
-import 'package:flutter_clean_todo/getx/presenters/stream_subscription_manager.dart';
+import 'package:flutter_clean_todo/infra/getx/presenters/stream_subscription_manager.dart';
 import 'package:get/get.dart';
 
 class GetxCreateTodoPresenter extends GetxController

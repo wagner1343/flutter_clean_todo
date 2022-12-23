@@ -23,7 +23,7 @@ class LoginForm extends StatelessWidget {
     final presenter = Provider.of<LoginPagePresenter>(context);
 
     return Container(
-      constraints: BoxConstraints(maxWidth: 320),
+      constraints: const BoxConstraints(maxWidth: 320),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +53,7 @@ class LoginForm extends StatelessWidget {
               children: [
                 TextButton(
                     onPressed: () => _registerOnPressed(presenter),
-                    child: Text("Sign Up")),
+                    child: const Text("Sign Up")),
                 Container(
                   width: 8,
                 ),

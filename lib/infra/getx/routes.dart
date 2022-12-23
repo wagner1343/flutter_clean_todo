@@ -3,9 +3,9 @@ import 'package:flutter_clean_todo/flutter/pages/login/login_page.dart';
 import 'package:flutter_clean_todo/flutter/pages/register/register_page.dart';
 import 'package:flutter_clean_todo/flutter/pages/todos/create_todo/create_todo_page.dart';
 import 'package:flutter_clean_todo/flutter/pages/todos/todos_page.dart';
-import 'package:flutter_clean_todo/getx/components/getx_redirect.dart';
-import 'package:flutter_clean_todo/getx/middleware/auth/authenticated_only_guard.dart';
-import 'package:flutter_clean_todo/getx/middleware/auth/guest_only_guard.dart';
+import 'package:flutter_clean_todo/infra/getx/components/getx_redirect.dart';
+import 'package:flutter_clean_todo/infra/getx/middleware/auth/authenticated_only_guard.dart';
+import 'package:flutter_clean_todo/infra/getx/middleware/auth/guest_only_guard.dart';
 import 'package:flutter_clean_todo/ioc/locator.dart';
 import 'package:get/get.dart';
 

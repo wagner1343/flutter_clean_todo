@@ -24,7 +24,7 @@ class RegisterForm extends StatelessWidget {
     final text = Theme.of(context).textTheme;
 
     return Container(
-      constraints: BoxConstraints(maxWidth: 320),
+      constraints: const BoxConstraints(maxWidth: 320),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,7 @@ class RegisterForm extends StatelessWidget {
               children: [
                 TextButton(
                     onPressed: () => _backOnPressed(presenter),
-                    child: Text("Back")),
+                    child: const Text("Back")),
                 Container(
                   width: 8,
                 ),
